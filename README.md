@@ -24,6 +24,13 @@ Currently only supports [VASR][0], Google ASR support will be added soon.
 
 This plugin works only on Python version 3 or above
 
+### Microphone Support
+
+This plugin uses PyAudio to record user input through microphone. Installation
+command below:
+
+  `pip install pyaudio`
+
 ### VASR Support
 
 For VASR support, you'll also need to install Vernacular speech SDK:
