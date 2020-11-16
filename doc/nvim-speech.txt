@@ -1,0 +1,108 @@
+*nvim-speech.txt* Neovim plugin for speech to text.
+*nvim-speech*
+             _                                          _     ~
+            (_)                                        | |    ~
+  _ ____   ___ _ __ ___ ______ ___ _ __   ___  ___  ___| |__  ~
+ | '_ \ \ / / | '_ ` _ \______/ __| '_ \ / _ \/ _ \/ __| '_ \ ~
+ | | | \ V /| | | | | | |     \__ \ |_) |  __/  __/ (__| | | |~
+ |_| |_|\_/ |_|_| |_| |_|     |___/ .__/ \___|\___|\___|_| |_|~
+                                  | |                         ~
+                                  |_|                         ~
+
+==============================================================================
+CONTENTS                                                  *nvim-speech-contents*
+
+   01. Intro ............................................... |nvim-speech-intro|
+   02. Features ......................................... |nvim-speech-features|
+   03. Configuration ............................... |nvim-speech-configuration|
+   04. Commands ......................................... |nvim-speech-commands|
+   05. Key Bindings...................................|nvim-speech-key-bindings|
+   06. Customization ............................... |nvim-speech-customization|
+   07. Contributions ............................... |nvim-speech-contributions|
+   08. License ........................................... |nvim-speech-license|
+
+==============================================================================
+INTRODUCTION                                                 *nvim-speech-intro*
+
+Neovim plugin for speech to text.
+
+==============================================================================
+FEATURES                                                  *nvim-speech-features*
+
+* Records user input and fetches transcriptions from ASR providers.
+* Currently supports VASR: https://github.com/Vernacular-ai/speech-recognition
+
+==============================================================================
+CONFIGURATION                                        *nvim-speech-configuration*
+
+* Set ASR provider for the plugin. Can be 'vernacular' or 'google'
+
+  `let g:asr_provider='vernacular'`
+
+* Set ASR language code. Check language code for the providers below.
+
+  `let g:asr_language_code=en-IN`
+
+Vernacular ASR
+
+* Store API access token in `VERNACULAR_ACCESS_TOKEN` environment variable.
+
+`export VERNACULAR_ACCESS_TOKEN="xxxxxxxxxxxxxxxxxxxxxxx"`
+
+Language code:
+
+Vernacular ASR only supports indian languages for now. Use these language codes
+for following languages.
+
+| Language | Code  |
+| Hindi    | hi-IN |
+| English  | en-IN |
+| Kannada  | kn-IN |
+| Malayalam| ml-IN |
+| Bengali  | bn-IN |
+| Marathi  | mr-IN |
+| Gujarati | gu-IN |
+| Punjabi  | pa-IN |
+| Telugu   | te-IN |
+| Tamil    | ta-IN |
+
+Set these code as:
+
+`let g:asr_language_code="en-IN"`
+
+Google ASR
+
+Coming soon
+
+==============================================================================
+COMMANDS                                                  *nvim-speech-commands*
+
+:Speech                                                                *:Speech*
+  Record speech and store transcription in `g:asr_transcription`
+
+:SpeechEcho                                                        *:SpeechEcho*
+  Record speech and write transcription on current line
+
+
+==============================================================================
+KEY BINDINGS                                          *nvim-speech-key-bindings*
+
+<leader>s: Key binding for :Speech
+<leader>se: Key binding for :SpeechEcho
+
+==============================================================================
+CUSTOMIZATION                                        *nvim-speech-customization*
+
+IN-PROGRESS
+
+==============================================================================
+CONTRIBUTIONS                                        *nvim-speech-contributions*
+
+Contributions and pull requests are welcome.
+
+==============================================================================
+LICENSE                                                    *nvim-speech-license*
+
+Apache-2.0. Copyright © 2020 Vipul Sharma
+
+ vim:tw=78:ts=8:ft=help:norl:
