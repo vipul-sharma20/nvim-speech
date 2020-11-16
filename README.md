@@ -2,7 +2,7 @@
 
 Neovim plugin to record and convert speech to text.
 
-Currently only supports [VASR][0], Google ASR support will be added soon
+Currently only supports [VASR][0], Google ASR support will be added soon.
 
 <p align="center">
     <img src="https://i.imgur.com/K4kYnkL.gif" style="width:100%"/>
@@ -30,7 +30,7 @@ For VASR support, you'll also need to install Vernacular speech SDK:
 
   `pip install vernacular-ai-speech`
 
-more doc at [here][8]
+more doc [here][8]
 
 ### Google Support
 
